@@ -11,8 +11,6 @@ import CallToAction from "./CTA_Section/CallToAction";
 import Navbar from "./Navbar/Navbar";
 
 export default function MainContent() {
-  const t = useI18n();
-
   return (
     <div>
       <Navbar />
