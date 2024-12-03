@@ -3,17 +3,13 @@
 import React from "react";
 import Image from "next/image";
 
-interface CardFeatureProps {
+interface CardItemProps {
   src: string;
   title: string;
   description: string;
 }
 
-export default function CardFeature({
-  src,
-  title,
-  description,
-}: CardFeatureProps) {
+export default function CardItem({ src, title, description }: CardItemProps) {
   return (
     <div className="rounded-lg overflow-hidden shadow-lg bg-white py-4">
       <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">

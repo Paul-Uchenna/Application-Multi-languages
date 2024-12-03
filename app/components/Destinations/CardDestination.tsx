@@ -23,9 +23,9 @@ export default function CardDestination({
         <Image src={src} fill className="object-cover" alt={title} />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-black/80">{description}</h3>
+        <h3 className="text-xl font-bold mb-2 text-black/80">{title}</h3>
         <div className="flex justify-between text-sm">
-          <p className="text-gray-600 ">{}</p>
+          <p className="text-gray-600 ">{description}</p>
           <Link
             href={""}
             className="text-emerald-500 hover:text-emerald-600 hover:tracking-wide transition-all"

@@ -3,11 +3,11 @@
 import React from "react";
 import Image from "next/image";
 
-interface CardGalleryProps {
+interface CardItemProps {
   imgUrl: string;
 }
 
-export default function CardGallery({ imgUrl }: CardGalleryProps) {
+export default function CardItem({ imgUrl }: CardItemProps) {
   return (
     <div className="relative h-64 group overflow-hidden rounded-lg">
       <Image
