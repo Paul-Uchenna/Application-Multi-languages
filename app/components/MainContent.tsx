@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useI18n } from "@/locales/client";
 
 import Destinations from "./Destinations/Destinations";
 import Features from "./Features/Features";
