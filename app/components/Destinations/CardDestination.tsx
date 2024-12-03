@@ -28,7 +28,7 @@ export default function CardDestination({
           <p className="text-gray-600 ">{description}</p>
           <Link
             href={""}
-            className="text-emerald-500 hover:text-emerald-600 hover:tracking-wide transition-all"
+            className="text-yellow-500 hover:text-yellow-600 hover:tracking-wide transition-all"
           >
             {link}
           </Link>
