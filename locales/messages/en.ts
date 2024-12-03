@@ -1,4 +1,11 @@
 export default {
+  menu: {
+    home: "Home",
+    destinations: "Destinations",
+    features: "Features",
+    galleries: "Galleries",
+    contact: "Contact",
+  },
   hero: {
     title: "Discover the World",
     subtitle: "Travel through the most beautiful destinations",

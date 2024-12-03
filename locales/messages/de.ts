@@ -1,4 +1,11 @@
 export default {
+  menu: {
+    home: "Startseite",
+    destinations: "Reiseziele",
+    features: "Funktionen",
+    galleries: "Galerien",
+    contact: "Kontakt",
+  },
   hero: {
     title: "Entdecke die Welt",
     subtitle: "Reise durch die schönsten Reiseziele",

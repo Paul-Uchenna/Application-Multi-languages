@@ -1,5 +1,12 @@
 // locales/en.ts
 export default {
+  menu: {
+    home: "ホーム",
+    destinations: "目的地",
+    features: "機能",
+    galleries: "ギャラリー",
+    contact: "コンタクト",
+  },
   hero: {
     title: "世界を発見",
     subtitle: "最も美しい目的地を旅しよう",

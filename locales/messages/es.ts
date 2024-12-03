@@ -1,5 +1,12 @@
 // locales/en.ts
 export default {
+  menu: {
+    home: "Inicio",
+    destinations: "Destinos",
+    features: "Características",
+    galleries: "Galerías",
+    contact: "Contacto",
+  },
   hero: {
     title: "Descubre el Mundo",
     subtitle: "Viaja por los destinos más hermosos",
