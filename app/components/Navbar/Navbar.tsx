@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useScopedI18n } from "@/locales/client";
 import {
@@ -28,7 +28,7 @@ export default function Navbar() {
     { icon: faEnvelope, name: tScorpe("contact"), href: "/" },
   ];
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > 10) setHasScrolled(true);
@@ -38,12 +38,12 @@ export default function Navbar() {
     else setIsVisible(true);
 
     setLastScrollY(currentScrollY);
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [handleScroll]);
 
   return (
     <section
