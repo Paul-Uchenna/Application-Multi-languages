@@ -73,40 +73,44 @@ export default function MobileNavbar() {
         </div>
       </section>
 
-      {isMenuOpen && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 z-50 flex justify-end ">
-          <div className="relative w-72 bg-black py-12 px-6 h-full">
-            <button
-              type="button"
-              onClick={toggleMenu}
-              className="absolute top-4 right-4 hover:-rotate-180 duration-500"
-            >
-              <Image
-                src={svg_close_menu}
-                width={25}
-                height={25}
-                alt="Menu_Icon"
-              />
-            </button>
-            <nav className="mb-6">
-              <ul className="flex flex-col gap-4">
-                {menu.map((item, index) => (
-                  <li key={index} className="flex flex-col space-x-2">
-                    <div className="flex items-center text-white hover:text-yellow-400 transition-all duration-300">
-                      <FontAwesomeIcon icon={item.icon} className="mr-2" />
-                      <Link href={item.href} className="group relative">
-                        <span>{item.name}</span>
-                        <span className="ease absolute bottom-0 left-0 w-0 border-b-2 border-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-                      </Link>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            <SwitchLanguage />
-          </div>
+      <div
+        className={`fixed top-0 left-0 right-0 bottom-0 bg-black/50 z-50 flex justify-end transition-all duration-300 ${
+          isMenuOpen
+            ? "translate-x-0 opacity-100 visible"
+            : "-translate-x-full opacity-0 invisible"
+        }`}
+      >
+        <div className="relative w-72 bg-black py-12 px-6 h-full">
+          <button
+            type="button"
+            onClick={toggleMenu}
+            className="absolute top-4 right-4 hover:-rotate-180 duration-500"
+          >
+            <Image
+              src={svg_close_menu}
+              width={25}
+              height={25}
+              alt="Menu_Icon"
+            />
+          </button>
+          <nav className="mb-6">
+            <ul className="flex flex-col gap-4">
+              {menu.map((item, index) => (
+                <li key={index} className="flex flex-col space-x-2">
+                  <div className="flex items-center text-white hover:text-yellow-400 transition-all duration-300">
+                    <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                    <Link href={item.href} className="group relative">
+                      <span>{item.name}</span>
+                      <span className="ease absolute bottom-0 left-0 w-0 border-b-2 border-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+                    </Link>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <SwitchLanguage />
         </div>
-      )}
+      </div>
     </div>
   );
 }
