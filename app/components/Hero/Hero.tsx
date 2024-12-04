@@ -31,13 +31,13 @@ export default function Hero() {
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="text-white max-w-2xl">
               <h1 className="text-6xl font-bold mb-6 animate-fade-in">
-                {t("hero.title")}
+                {t("home.hero.title")}
               </h1>
               <p className="text-2xl mb-10 animate-fade-in">
-                {t("hero.subtitle")}
+                {t("home.hero.subtitle")}
               </p>
               <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md text-md font-semibold transform hover:scale-105 transition-all animate-fade-in">
-                {t("hero.cta")}
+                {t("home.hero.cta")}
               </button>
             </div>
           </div>

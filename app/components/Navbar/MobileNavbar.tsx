@@ -17,7 +17,7 @@ import { useScopedI18n } from "@/locales/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function MobileNavbar() {
-  const tScorpe = useScopedI18n("menu");
+  const tScorpe = useScopedI18n("home.menu");
 
   const [isVisible, setIsVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

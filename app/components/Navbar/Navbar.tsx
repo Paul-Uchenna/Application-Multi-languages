@@ -14,7 +14,7 @@ import Link from "next/link";
 import Logo from "../Logo";
 
 export default function Navbar() {
-  const tScorpe = useScopedI18n("menu");
+  const tScorpe = useScopedI18n("home.menu");
 
   const [isVisible, setIsVisible] = useState(true);
   const [hasScrolled, setHasScrolled] = useState(false);
