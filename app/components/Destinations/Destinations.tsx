@@ -62,7 +62,7 @@ export default function Destinations() {
         }
       });
     };
-
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
