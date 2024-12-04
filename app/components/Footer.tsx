@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <p>{t("footer.rights")}</p>
-          <div className="space-x-6">
+          <div className="flex space-x-6">
             {/* Social Links*/}
             <Link
               target="_blank"
