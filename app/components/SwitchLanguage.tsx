@@ -22,7 +22,7 @@ const languages = {
   },
   jp: {
     name: "日本語",
-    flag: "/japan.svg",
+    flag: "/japan-svgrepo-com.svg",
   },
 };
 
