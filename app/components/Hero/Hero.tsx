@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import { useI18n } from "@/locales/client";
+
 import Image from "next/image";
 
 export default function Hero() {
   const t = useI18n();
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".animate-fade-in",
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, stagger: 0.3 }
+    );
+  }, []);
+
   return (
     <section className="min-h-screen">
       <div className="relative h-screen">
@@ -22,10 +33,10 @@ export default function Hero() {
               <h1 className="text-6xl font-bold mb-6 animate-fade-in">
                 {t("hero.title")}
               </h1>
-              <p className="text-2xl mb-10 animation-fade-in">
+              <p className="text-2xl mb-10 animate-fade-in">
                 {t("hero.subtitle")}
               </p>
-              <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md text-md font-semibold transform hover:scale-105 transition-all animate-fade-in-delay-2">
+              <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md text-md font-semibold transform hover:scale-105 transition-all animate-fade-in">
                 {t("hero.cta")}
               </button>
             </div>

@@ -1,6 +1,8 @@
 import { useI18n } from "@/locales/client";
 import { Feature } from "@/src/Types/types";
-import React from "react";
+import { gsap } from "gsap";
+
+import React, { useEffect } from "react";
 import CardItem from "./CardItem";
 
 export default function Features() {
@@ -22,6 +24,28 @@ export default function Features() {
       description: t("features.support.description"),
     },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".feature-card");
+      elements.forEach((element, index) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.75) {
+          gsap.to(element, {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+            delay: index * 0.3,
+          });
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="py-20 bg-gray-200">
       <div className="container mx-auto px-4">
@@ -30,12 +54,16 @@ export default function Features() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <CardItem
+            <div
               key={index}
-              src={feature.src}
-              title={feature.title}
-              description={feature.description}
-            />
+              className="feature-card opacity-0 transform translate-x-12 transition-all"
+            >
+              <CardItem
+                src={feature.src}
+                title={feature.title}
+                description={feature.description}
+              />
+            </div>
           ))}
         </div>
       </div>

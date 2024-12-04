@@ -1,10 +1,13 @@
-import React from "react";
-import CardDestination from "./CardDestination";
+import React, { useEffect } from "react";
 import { useI18n } from "@/locales/client";
 import { Destination } from "@/src/Types/types";
+import { gsap } from "gsap";
+
+import CardDestination from "./CardDestination";
 
 export default function Destinations() {
   const t = useI18n();
+
   const destinations: Destination[] = [
     {
       src: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -44,6 +47,26 @@ export default function Destinations() {
     },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".destination-card");
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.75) {
+          gsap.to(element, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+          });
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
@@ -52,13 +75,17 @@ export default function Destinations() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {destinations.map((destination, index) => (
-            <CardDestination
+            <div
               key={index}
-              src={destination.src}
-              title={destination.title}
-              description={destination.description}
-              link={destination.link}
-            />
+              className="destination-card opacity-0 transform translate-y-12 transition-all"
+            >
+              <CardDestination
+                src={destination.src}
+                title={destination.title}
+                description={destination.description}
+                link={destination.link}
+              />
+            </div>
           ))}
         </div>
       </div>
