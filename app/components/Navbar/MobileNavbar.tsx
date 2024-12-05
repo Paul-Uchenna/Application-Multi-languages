@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useCallback, useEffect, useState } from "react";
 import Logo from "../Logo";
 import SwitchLanguage from "@/app/components/SwitchLanguage";

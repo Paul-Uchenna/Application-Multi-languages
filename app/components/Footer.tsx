@@ -1,3 +1,5 @@
+"use client";
+
 import { useI18n } from "@/locales/client";
 import React from "react";
 import Link from "next/link";
