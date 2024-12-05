@@ -36,7 +36,7 @@ export default function Hero() {
               <p className="text-2xl mb-10 animate-fade-in">
                 {t("home.hero.subtitle")}
               </p>
-              <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md text-md font-semibold transform hover:scale-105 transition-all animate-fade-in">
+              <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md text-md font-semibold transform transition-all hover:scale-105 hover:-translate-y-1 duration-500">
                 {t("home.hero.cta")}
               </button>
             </div>
