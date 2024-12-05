@@ -6,19 +6,10 @@ import Link from "next/link";
 import svg_open_Menu from "@/public/align-left-svgrepo-com.svg";
 import svg_close_menu from "@/public/close-circle-svgrepo-com.svg";
 
-import {
-  faHome,
-  faGlobe,
-  faCogs,
-  faImages,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import { useScopedI18n } from "@/locales/client";
+import { getMenu } from "./navLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function MobileNavbar() {
-  const tScorpe = useScopedI18n("home.menu");
-
   const [isVisible, setIsVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -39,14 +30,6 @@ export default function MobileNavbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
-
-  const menu = [
-    { icon: faHome, name: tScorpe("home"), href: "/" },
-    { icon: faGlobe, name: tScorpe("destinations"), href: "/" },
-    { icon: faCogs, name: tScorpe("features"), href: "/" },
-    { icon: faImages, name: tScorpe("galleries"), href: "/" },
-    { icon: faEnvelope, name: tScorpe("contact"), href: "/" },
-  ];
 
   return (
     <div className="md:hidden">
@@ -97,7 +80,7 @@ export default function MobileNavbar() {
           </button>
           <nav className="mb-6">
             <ul className="flex flex-col gap-4">
-              {menu.map((item, index) => (
+              {getMenu().map((item, index) => (
                 <li key={index} className="flex flex-col space-x-2">
                   <div className="flex items-center text-white hover:text-yellow-400 transition-all duration-300">
                     <FontAwesomeIcon icon={item.icon} className="mr-2" />

@@ -1,21 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useScopedI18n } from "@/locales/client";
-import {
-  faHome,
-  faGlobe,
-  faCogs,
-  faImages,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { getMenu } from "./navLinks";
 
 import SwitchLanguage from "@/app/components/SwitchLanguage";
 import Link from "next/link";
 import Logo from "../Logo";
 
 export default function DesktopNavbar() {
-  const tScorpe = useScopedI18n("home.menu");
-
   const [isVisible, setIsVisible] = useState(true);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -37,14 +28,6 @@ export default function DesktopNavbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
-  const menu = [
-    { icon: faHome, name: tScorpe("home"), href: "/" },
-    { icon: faGlobe, name: tScorpe("destinations"), href: "/" },
-    { icon: faCogs, name: tScorpe("features"), href: "/" },
-    { icon: faImages, name: tScorpe("galleries"), href: "/" },
-    { icon: faEnvelope, name: tScorpe("contact"), href: "/" },
-  ];
-
   return (
     <div className="hidden md:block">
       <section
@@ -58,7 +41,7 @@ export default function DesktopNavbar() {
 
             <nav>
               <ul className="flex gap-8">
-                {menu.map((item, index) => (
+                {getMenu().map((item, index) => (
                   <li key={index} className="flex items-center space-x-2">
                     <div className="flex items-center text-white hover:text-yellow-400 transition-all duration-500">
                       <FontAwesomeIcon icon={item.icon} className="mr-2" />
