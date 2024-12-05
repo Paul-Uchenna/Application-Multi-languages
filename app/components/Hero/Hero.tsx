@@ -16,7 +16,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen w-full bg-black bg-opacity-30 overflow-x-hidden">
       <div className="relative h-screen">
         <div className="fixed w-full h-full -z-10">
           <Image
