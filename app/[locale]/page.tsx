@@ -10,7 +10,7 @@ import Galleries from "../components/Galleries/Galleries";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Navbar />
       <Hero />
       <Destinations />
