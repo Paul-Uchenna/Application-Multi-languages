@@ -17,7 +17,6 @@ export default function Home() {
       <Features />
       <CallToAction />
       <Galleries />
-      <Footer />
     </div>
   );
 }
