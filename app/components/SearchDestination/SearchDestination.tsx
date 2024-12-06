@@ -13,7 +13,7 @@ interface CountryOption {
   data: any;
 }
 
-export default function SearchBar() {
+export default function SearchDestination() {
   const [countries, setCountries] = useState<CountryOption[]>([]);
   const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(
     null
