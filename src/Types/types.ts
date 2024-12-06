@@ -32,6 +32,13 @@ export interface Country {
     [key: string]: string;
   };
   latlng: [number, number];
+  capitalInfo: {
+    latlng: [number, number];
+  };
+  maps: {
+    googleMaps: string;
+    openStreetMaps: string;
+  };
   borders: string[];
   independent: boolean;
   unMember: boolean;
