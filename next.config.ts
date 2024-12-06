@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         hostname: "unsplash.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "flagcdn.com",
+        pathname: "/**",
+      },
     ],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 1080, 1920, 2048],
