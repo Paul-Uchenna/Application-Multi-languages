@@ -11,6 +11,18 @@ export type Feature = {
   description: string;
 };
 
+export interface AirQuality {
+  aqi: number;
+}
+
+export interface WeatherData {
+  temperature: number;
+  humidity: number;
+  pressure: number;
+  windSpeed: number;
+  airQuality: AirQuality;
+}
+
 export interface Country {
   name: {
     common: string;
