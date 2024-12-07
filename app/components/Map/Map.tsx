@@ -30,7 +30,7 @@ export default function Map({
   }, []);
 
   return (
-    <div id="map-container" className="w-full h-[400px]">
+    <div id="map-container" className="w-full h-[400px] shadow-md">
       <MapContainer
         center={coordinates}
         zoom={4}
