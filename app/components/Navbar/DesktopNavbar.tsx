@@ -48,7 +48,7 @@ export default function DesktopNavbar() {
                     <div className="flex items-center text-white hover:text-yellow-400 transition-all duration-500">
                       <FontAwesomeIcon icon={item.icon} className="mr-2" />
                       <Link href={item.href} className="group relative">
-                        <span>{item.name}</span>
+                        <span>{item.label}</span>
                         <span className="ease absolute bottom-0 left-0 w-0 border-b-2 border-yellow-400 transition-all duration-500 group-hover:w-full"></span>
                       </Link>
                     </div>

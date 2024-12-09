@@ -5,23 +5,23 @@ import Image from "next/image";
 
 const languages = {
   fr: {
-    name: "Français",
+    label: "Français",
     flag: "/france.svg",
   },
   en: {
-    name: "English",
+    label: "English",
     flag: "/united-kingdom.svg",
   },
   es: {
-    name: "Español",
+    label: "Español",
     flag: "/spain.svg",
   },
   de: {
-    name: "Deutsch",
+    label: "Deutsch",
     flag: "/germany.svg",
   },
   jp: {
-    name: "日本語",
+    label: "日本語",
     flag: "/japan-svgrepo-com.svg",
   },
 };
@@ -44,12 +44,12 @@ export default function LanguageSwitcher() {
             alt="Flag"
           />
           <span className="font-medium text-gray-800 text-sm">
-            {languages[locale as keyof typeof languages]?.name}
+            {languages[locale as keyof typeof languages]?.label}
           </span>
         </button>
 
         <div className="absolute right-0 mt-2 w-48 py-2 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top scale-95 group-hover:scale-100">
-          {Object.entries(languages).map(([code, { name, flag }]) => (
+          {Object.entries(languages).map(([code, { label, flag }]) => (
             <button
               key={code}
               onClick={() =>
@@ -62,7 +62,7 @@ export default function LanguageSwitcher() {
               }`}
             >
               <Image src={flag as string} width={20} height={20} alt="flag" />
-              <span>{name}</span>
+              <span>{label}</span>
             </button>
           ))}
         </div>
