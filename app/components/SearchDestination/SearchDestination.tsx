@@ -6,6 +6,7 @@ import { faSearchLocation } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
 import Select from "react-select";
 import { searchCountries } from "@/app/api/seachCountries";
+import Image from "next/image";
 
 interface CountryOption {
   value: string;
@@ -30,7 +31,7 @@ export default function SearchDestination() {
         value: country.name.common || "",
         label: (
           <div className="flex items-center">
-            <img
+            <Image
               src={country.flags.png || ""}
               alt={country.name.common || ""}
               className="w-6 h-4 mr-2"
