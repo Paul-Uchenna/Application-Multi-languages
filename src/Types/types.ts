@@ -11,16 +11,14 @@ export type Feature = {
   description: string;
 };
 
-export interface AirQuality {
-  aqi: number;
-}
-
 export interface WeatherData {
   temperature: number;
   humidity: number;
   pressure: number;
   windSpeed: number;
-  airQuality: AirQuality;
+  feelsLike: number;
+  condition: string;
+  airQuality: { aqi: number } | null;
 }
 
 export interface Country {
