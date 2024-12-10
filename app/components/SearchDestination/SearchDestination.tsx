@@ -35,6 +35,8 @@ export default function SearchDestination() {
               src={country.flags.png || ""}
               alt={country.name.common || ""}
               className="w-6 h-4 mr-2"
+              width={32}
+              height={32}
             />
             {country.name.common}
           </div>

@@ -23,6 +23,11 @@ const nextConfig: NextConfig = {
         hostname: "flagcdn.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+        pathname: "/**",
+      },
     ],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 1080, 1920, 2048],

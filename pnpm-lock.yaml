@@ -26,9 +26,6 @@ importers:
       gsap:
         specifier: ^3.12.5
         version: 3.12.5
-      ldrs:
-        specifier: ^1.0.2
-        version: 1.0.2
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
@@ -1345,9 +1342,6 @@ packages:
   language-tags@1.0.9:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
-
-  ldrs@1.0.2:
-    resolution: {integrity: sha512-sYJmivdkIiHrUEqTrEWccBoLdaENpzbzkABI5rk8rRxTXrg9i2xVuDvUUuhOhJY3RmQyaoxs046pM1DCRdcIpg==}
 
   leaflet@1.9.4:
     resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
@@ -3389,8 +3383,6 @@ snapshots:
   language-tags@1.0.9:
     dependencies:
       language-subtag-registry: 0.3.23
-
-  ldrs@1.0.2: {}
 
   leaflet@1.9.4: {}
 
