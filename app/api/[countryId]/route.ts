@@ -47,7 +47,7 @@ export async function GET(
       timezones: country.timezones || [],
     };
 
-    console.log(formattedCountry);
+    // console.log(formattedCountry);
 
     return NextResponse.json(formattedCountry);
   } catch (error: any) {
