@@ -42,7 +42,9 @@ export default function MobileNavbar() {
       >
         <div className="container mx-auto px-4 h-full">
           <div className="flex items-center justify-between h-full">
-            <Logo />
+            <Link href="/">
+              <Logo />
+            </Link>
             <button
               type="button"
               onClick={toggleMenu}
