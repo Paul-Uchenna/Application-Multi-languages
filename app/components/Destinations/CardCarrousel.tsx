@@ -42,7 +42,9 @@ export default function CardCarrousel({
         <div className="container mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-2xl">
             <h1 className="text-6xl font-bold mb-6 animate-fade-in">{title}</h1>
-            <p className="text-2xl mb-10 animate-fade-in">{description}</p>
+            <p className="text-2xl mb-10 text-white/70 animate-fade-in">
+              {description}
+            </p>
 
             <div className="hidden">
               <button
