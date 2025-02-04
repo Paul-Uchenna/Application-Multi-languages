@@ -1,13 +1,12 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-
 import Image from "next/image";
 
 interface CardCarrouselProps {
@@ -24,17 +23,19 @@ export default function CardCarrousel({
   handlePrev,
 }: CardCarrouselProps) {
   const { src, title, description } = imgCarrousel[currentIndex];
+  const imageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.fromTo(
-      ".animate-fade-in",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, stagger: 0.3 }
+      imageRef.current,
+      { x: "-100%", opacity: 0 },
+      { x: "0%", opacity: 1, duration: 2, ease: "power2.out" }
     );
-  }, []);
+  }, [currentIndex]);
+
   return (
     <div>
-      <div className="fixed w-full h-full -z-10">
+      <div className="fixed w-full h-full -z-10" ref={imageRef}>
         <Image src={src} alt={title} fill className="object-cover" priority />
       </div>
 
