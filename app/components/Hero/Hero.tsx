@@ -27,7 +27,7 @@ export default function Hero() {
             priority
           />
         </div>
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 text-center md:text-left md:pl-20">
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="text-white max-w-2xl">
               <h1 className="text-6xl font-bold mb-6 animate-fade-in">
