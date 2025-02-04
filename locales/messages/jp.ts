@@ -4,7 +4,7 @@ export default {
     menu: {
       home: "ホーム",
       destinations: "目的地",
-      features: "機能",
+      blog: "ブログ",
       galleries: "ギャラリー",
       contact: "コンタクト",
     },
@@ -46,7 +46,7 @@ export default {
         link: "もっと学ぶ",
       },
     },
-    features: {
+    blogs: {
       title: "なぜ私たちを選ぶのか",
       expert: {
         title: "専門ガイド",
