@@ -34,11 +34,13 @@ export default function CardCarrousel({
   }, [currentIndex]);
 
   return (
-    <div>
-      <div className="fixed w-full h-full -z-10" ref={imageRef}>
+    <div className="relative h-screen overflow-hidden">
+      {/* Conteneur de l'image avec position: absolute */}
+      <div className="absolute w-full h-full -z-10" ref={imageRef}>
         <Image src={src} alt={title} fill className="object-cover" priority />
       </div>
 
+      {/* Contenu superposé */}
       <div className="absolute inset-0 bg-black bg-opacity-40 text-center md:text-left md:pl-20">
         <div className="container mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-2xl">

@@ -6,7 +6,7 @@ import { destinationOptions } from "@/app/components/Destinations/Datas/DataDest
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
-import Carousel from "@/app/components/Destinations/CardCarrousel";
+import CardCarrousel from "@/app/components/Destinations/CardCarrousel";
 import SearchDestination from "@/app/components/SearchDestination/SearchDestination";
 import Link from "next/link";
 import { partners } from "@/app/components/Destinations/Datas/DataPartners";
@@ -34,8 +34,8 @@ export default function DestinationsPage() {
 
   return (
     <section className="min-h-screen">
-      <div className="relative h-screen">
-        <Carousel
+      <div className="relative h-screen overflow-hidden">
+        <CardCarrousel
           imgCarrousel={dataCarrousel()}
           currentIndex={currentIndex}
           handleNext={handleNext}
