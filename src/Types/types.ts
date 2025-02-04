@@ -5,7 +5,7 @@ export type Destination = {
   link: string;
 };
 
-export type Feature = {
+export type BlogTypes = {
   src: string;
   title: string;
   description: string;

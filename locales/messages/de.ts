@@ -3,7 +3,7 @@ export default {
     menu: {
       home: "Startseite",
       destinations: "Reiseziele",
-      features: "Funktionen",
+      blog: "Blog",
       galleries: "Galerien",
       contact: "Kontakt",
     },
@@ -45,7 +45,7 @@ export default {
         link: "Mehr erfahren",
       },
     },
-    features: {
+    blogs: {
       title: "Warum uns wählen",
       expert: {
         title: "Expertenführer",

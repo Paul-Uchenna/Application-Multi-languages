@@ -4,7 +4,7 @@ export default {
     menu: {
       home: "Inicio",
       destinations: "Destinos",
-      features: "Características",
+      blog: "Blog",
       galleries: "Galerías",
       contact: "Contacto",
     },
@@ -46,7 +46,7 @@ export default {
         link: "Aprender más",
       },
     },
-    features: {
+    blogs: {
       title: "Por Qué Elegirnos",
       expert: {
         title: "Guías Expertos",
