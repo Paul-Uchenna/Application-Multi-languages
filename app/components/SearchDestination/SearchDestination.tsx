@@ -61,7 +61,7 @@ export default function SearchDestination() {
 
   return (
     <div>
-      <section className="w-2/4 mx-auto absolute top-full left-0 right-0 bg-black/95 transform -translate-y-1/2 border p-5 rounded-md">
+      <section className="w-[90%] md:w-2/4 mx-auto absolute top-full left-0 right-0 bg-black/95 transform -translate-y-1/2 border md:p-3 rounded-md">
         <div className="flex items-center space-x-5 justify-center p-5">
           <button
             type="button"
@@ -77,12 +77,12 @@ export default function SearchDestination() {
             }}
             isLoading={loading}
             onChange={handleChange}
-            placeholder="Where do you want to go?"
+            placeholder="Search for a country..."
             className="w-full text-black"
             styles={{
               control: (base) => ({
                 ...base,
-                padding: "5px",
+                padding: "0px",
                 borderRadius: "8px",
                 borderColor: "yellow",
                 "&:hover": {
