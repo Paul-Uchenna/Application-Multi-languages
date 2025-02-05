@@ -3,21 +3,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
-import axios from "axios";
 import Link from "next/link";
 import { articles } from "@/app/api/blog/DataArticles";
 
 export default function Blog() {
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      const response = await axios.get("/api/blog");
-      const data = await response.data;
-      console.log(data);
-    };
-
-    fetchBlogs();
-  }, []);
-
   useEffect(() => {
     gsap.fromTo(
       ".animate-fade-in",
