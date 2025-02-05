@@ -28,7 +28,7 @@ export async function GET(request: Request) {
         { status: 500 }
       );
     }
-    console.log("Photos:", response.data.results);
+    // console.log("Photos:", response.data.results);
 
     const photos = response.data.results
       .filter((photo: any) => photo.user.location)
