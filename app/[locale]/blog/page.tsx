@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import Link from "next/link";
-import { articles } from "@/app/api/blog/DataArticles";
+import { articles } from "@/app/components/Blog/DataArticles";
 
 export default function Blog() {
   useEffect(() => {
