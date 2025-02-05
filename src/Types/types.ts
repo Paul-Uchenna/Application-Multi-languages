@@ -54,3 +54,10 @@ export interface Country {
   unMember: boolean;
   timezones: string[];
 }
+
+export interface UnsplashPhotos {
+  id: string;
+  url: string;
+  description: string;
+  location: string;
+}
