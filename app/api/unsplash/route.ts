@@ -7,7 +7,7 @@ export async function GET(request: Request) {
 
   if (!countryName) {
     return NextResponse.json(
-      { error: "Le paramètre 'countryId' est requis." },
+      { error: "The 'countryId' parameter is required." },
       { status: 400 }
     );
   }
@@ -16,9 +16,9 @@ export async function GET(request: Request) {
     const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 
     if (!UNSPLASH_ACCESS_KEY) {
-      console.error("Clé Unsplash manquante.");
+      console.error("Missing Unsplash key.");
       return NextResponse.json(
-        { error: "Clé UNSPLASH_ACCESS_KEY non configurée dans .env.local." },
+        { error: "UNSPLASH_ACCESS_KEY not configured in .env.local." },
         { status: 500 }
       );
     }
@@ -31,9 +31,9 @@ export async function GET(request: Request) {
       },
     });
     if (response.status !== 200) {
-      console.error("Erreur de réponse API Unsplash:", response.statusText);
+      console.error("Unsplash API response error:", response.statusText);
       return NextResponse.json(
-        { error: "Échec lors de la récupération des photos." },
+        { error: "Failed to retrieve photos." },
         { status: 500 }
       );
     }
@@ -41,7 +41,7 @@ export async function GET(request: Request) {
     const photos = response.data.results.map((photo: any) => ({
       id: photo.id,
       url: photo.urls.regular,
-      alt: photo.alt_description || `Photo de ${countryName}`,
+      alt: photo.alt_description || `Photo of ${countryName}`,
       description:
         photo.description || photo.alt_description || "Place to visit",
       location: photo.location?.name || "",
@@ -52,7 +52,7 @@ export async function GET(request: Request) {
   } catch (error: any) {
     console.error("Erreur lors de l'appel à l'API Unsplash:", error.message);
     return NextResponse.json(
-      { error: "Erreur lors de la récupération des photos." },
+      { error: "Error when calling the Unsplash API." },
       { status: 500 }
     );
   }
