@@ -15,16 +15,24 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen w-full bg-black bg-opacity-30 overflow-hidden">
+    <section className="min-h-screen w-full overflow-hidden">
       <div className="relative h-screen overflow-hidden">
         <div className="absolute w-full h-full -z-10">
-          <Image
+          {/* <Image
             src="https://images.unsplash.com/photo-1707344088547-3cf7cea5ca49?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Travel background"
             fill
             className="object-cover"
             priority
-          />
+          /> */}
+          <video
+            src="/video-ab/travel-ad-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full scale-y-[1.2] scale-x-[1.3]"
+          ></video>
         </div>
 
         {/* Contenu superposé */}
