@@ -87,7 +87,9 @@ export default function DestinationsPage() {
 
                     {/* Tooltip */}
                     <div className="hidden group-hover:block absolute bottom-full left-1/2 transform -translate-x-[92%] md:-translate-x-80 translate-y-52 mb-2 bg-gray-800 text-white px-3 py-2 rounded-lg w-64 z-40 text-center shadow-lg">
-                      <h3 className="font-bold mb-2">Niveau de Difficulté</h3>
+                      <h3 className="font-bold mb-2">
+                        {t("destination.options.title")}
+                      </h3>
                       <p className="text-sm">
                         {destination.difficulty.explanation}
                       </p>
