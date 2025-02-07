@@ -245,6 +245,27 @@ export default {
       "Versenke dich in atemberaubende Landschaften und lass dich zu Traumzielen bringen. Erkunde diese Galerie und finde Inspiration für deine nächste Abenteuerreise.",
     loadMore: "Mehr Laden",
   },
+  contact: {
+    title: "Kontaktieren Sie Uns",
+    subtitle:
+      "Kontaktieren Sie uns für weitere Informationen oder um Ihre nächste Abenteuerreise zu buchen",
+    titleTwo: "Haben Sie Fragen ?",
+    subtitleTwo: "WIR STEHEN IHNEN ZU DIENST",
+    card: {
+      information: "Information",
+      callOn: "Rufen Sie an",
+      office: "Büro",
+      email: "E-Mail",
+    },
+    titleThree: "Senden Sie eine E-Mail",
+    form: {
+      name: "Name",
+      email: "E-Mail",
+      subject: "Betreff",
+      message: "Nachricht",
+      button: "Senden",
+    },
+  },
   footer: {
     rights: "Alle Rechte vorbehalten",
     privacy: "Datenschutzrichtlinie",

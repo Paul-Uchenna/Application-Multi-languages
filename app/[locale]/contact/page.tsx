@@ -8,15 +8,26 @@ import {
   faEnvelope,
   faGlobeEurope,
 } from "@fortawesome/free-solid-svg-icons";
-
-const contactInfo = [
-  { icon: faGlobeEurope, label: "Information", value: "www.pauluchenna.com" },
-  { icon: faPhone, label: "Call On", value: "+13132008109" },
-  { icon: faMapMarkerAlt, label: "Office", value: "Luxembourg" },
-  { icon: faEnvelope, label: "Email", value: "pauluchenna20@gmail.com" },
-];
+import { useScopedI18n } from "@/locales/client";
 
 export default function Contact() {
+  const t = useScopedI18n("contact");
+
+  const contactInfo = [
+    {
+      icon: faGlobeEurope,
+      label: t("card.information"),
+      value: "www.pauluchenna.com",
+    },
+    { icon: faPhone, label: t("card.callOn"), value: "+13132008109" },
+    { icon: faMapMarkerAlt, label: t("card.office"), value: "Luxembourg" },
+    {
+      icon: faEnvelope,
+      label: t("card.email"),
+      value: "pauluchenna20@gmail.com",
+    },
+  ];
+
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
   const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
@@ -46,16 +57,14 @@ export default function Contact() {
     <section className="py-20 px-4 bg-black opacity-95 text-white font-bold">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col items-center my-16">
-          <h2 className="text-3xl md:text-5xl text-center">
-            Get In Touch With Us
-          </h2>
-          <p>Contact Us</p>
+          <h2 className="text-3xl md:text-5xl text-center">{t("title")}</h2>
+          <p>{t("subtitle")} </p>
         </div>
         <h3 className="text-2xl text-center text-yellow-500 mb-2">
-          Have You any Question ?
+          {t("titleTwo")}
         </h3>
         <h4 className="text-md text-center text-white mb-10">
-          WE'RE AT YOUR SERVICE
+          {t("subtitleTwo")}
         </h4>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center mb-10">
@@ -74,32 +83,32 @@ export default function Contact() {
           <p className="text-center text-green-500 mt-14 text-2xl">{message}</p>
         ) : (
           <div>
-            <h3 className="text-xl text-center mb-10">SEND AN EMAIL</h3>
+            <h3 className="text-xl text-center mb-10">{t("titleThree")} </h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
-                  placeholder="Name"
+                  placeholder={t("form.name")}
                   className="w-full text-black p-3 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
                   required
                   minLength={2}
                 />
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder={t("form.email")}
                   className="w-full text-black p-3 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
                   required
                 />
               </div>
               <input
                 type="text"
-                placeholder="Subject"
+                placeholder={t("form.subject")}
                 className="w-full text-black p-3 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
                 required
                 minLength={5}
               />
               <textarea
-                placeholder="Message"
+                placeholder={t("form.message")}
                 className="w-full text-black font-semibold p-3 border rounded-lg h-32 outline-none focus:ring-2 focus:ring-yellow-400"
                 required
                 minLength={10}
@@ -109,7 +118,7 @@ export default function Contact() {
                 className="w-full bg-yellow-500 text-white py-3 rounded-lg hover:bg-yellow-600 transition"
                 disabled={isLoading}
               >
-                {isLoading ? "Sending..." : "Send Message"}
+                {isLoading ? "Sending..." : t("form.button")}
               </button>
             </form>
           </div>

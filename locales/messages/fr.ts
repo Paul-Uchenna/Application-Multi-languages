@@ -1,4 +1,3 @@
-// locales/en.ts
 export default {
   home: {
     menu: {
@@ -246,7 +245,27 @@ export default {
       "Plongez-vous dans des paysages à couper le souffle et laissez-vous transporter vers des destinations de rêve. Explorez cette galerie et trouvez de l'inspiration pour votre prochaine aventure.",
     loadMore: "Charger Plus",
   },
-  contact: {},
+  contact: {
+    title: "Restez en Contact avec Nous",
+    subtitle:
+      "Contactez-nous pour plus d'informations ou pour réserver votre prochaine aventure",
+    titleTwo: "Avez-Vous des Questions ?",
+    subtitleTwo: "NOUS SOMMES À VOTRE SERVICE",
+    card: {
+      information: "Informations",
+      callOn: "Appelez au",
+      office: "Bureau",
+      email: "Email",
+    },
+    titleThree: "Envoyer un Email",
+    form: {
+      name: "Nom",
+      email: "Email",
+      subject: "Objet",
+      message: "Message",
+      button: "Envoyer",
+    },
+  },
   footer: {
     rights: "Tous droits réservés",
     privacy: "Politique de confidentialité",

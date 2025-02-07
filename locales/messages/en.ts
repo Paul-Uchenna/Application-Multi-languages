@@ -1,6 +1,3 @@
-import { error } from "console";
-import { title } from "process";
-
 export default {
   home: {
     menu: {
@@ -243,6 +240,26 @@ export default {
     subtitle:
       "Immerse yourself in breathtaking landscapes and let yourself be transported to dream destinations. Explore this gallery and find inspiration for your next adventure.",
     loadMore: "Load More",
+  },
+  contact: {
+    title: "Get In Touch With Us",
+    subtitle: "Contact us for more information or to book your next adventure",
+    titleTwo: "Have You Any Questions ?",
+    subtitleTwo: "WE'RE AT YOUR SERVICE",
+    card: {
+      information: "Information",
+      callOn: "Call On",
+      office: "Office",
+      email: "Email",
+    },
+    titleThree: "Send An Email",
+    form: {
+      name: "Name",
+      email: "Email",
+      subject: "Subject",
+      message: "Message",
+      button: "Send",
+    },
   },
   footer: {
     rights: "All rights reserved",

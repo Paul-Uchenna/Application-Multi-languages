@@ -1,4 +1,3 @@
-// locales/en.ts
 export default {
   home: {
     menu: {
@@ -240,6 +239,26 @@ export default {
     subtitle:
       "息をのむような風景に浸り、夢の目的地へと運ばれる感覚を体験してください。このギャラリーを探索して、次の冒険のインスピレーションを見つけましょう。",
     loadMore: "さらに読み込む",
+  },
+  contact: {
+    title: "私たちに連絡する",
+    subtitle: "詳細情報や次の冒険の予約についてお問い合わせください",
+    titleTwo: "何か質問はありますか？",
+    subtitleTwo: "私たちはあなたのサービスのためにここにいます",
+    card: {
+      information: "情報",
+      callOn: "電話するには",
+      office: "オフィス",
+      email: "メール",
+    },
+    titleThree: "メールを送信",
+    form: {
+      name: "名前",
+      email: "メール",
+      subject: "件名",
+      message: "メッセージ",
+      button: "送信",
+    },
   },
   footer: {
     rights: "全著作権所有",

@@ -1,4 +1,3 @@
-// locales/en.ts
 export default {
   home: {
     menu: {
@@ -242,6 +241,27 @@ export default {
     subtitle:
       "Sumérgete en paisajes impresionantes y déjate transportar a destinos de ensueño. Explora esta galería y encuentra inspiración para tu próxima aventura.",
     loadMore: "Cargar Más",
+  },
+  contact: {
+    title: "Póngase en Contacto con Nosotros",
+    subtitle:
+      "Contáctenos para más información o para reservar su próxima aventura",
+    titleTwo: "¿Tiene Algún Pregunta ?",
+    subtitleTwo: "ESTAMOS A SU SERVICIO",
+    card: {
+      information: "Información",
+      callOn: "Llame al",
+      office: "Oficina",
+      email: "Correo Electrónico",
+    },
+    titleThree: "Enviar un Correo Electrónico",
+    form: {
+      name: "Nombre",
+      email: "Correo Electrónico",
+      subject: "Asunto",
+      message: "Mensaje",
+      button: "Enviar",
+    },
   },
   footer: {
     rights: "Todos los derechos reservados",
