@@ -67,6 +67,144 @@ export default {
       button: "Réserver",
     },
   },
+  destinations: {
+    carrousel: {
+      santorini: {
+        title: "Santorin, Grèce",
+        description:
+          "Maisons blanches accrochées aux falaises, où chaque coucher de soleil peint l'horizon en nuances de feu, révélant la magie d'une île méditerranéenne.",
+      },
+      kyoto: {
+        title: "Kyoto, Japon",
+        description:
+          "Temples ancestraux où la tradition danse avec la modernité, tandis que les cerisiers en fleurs dessinent un nuage éphémère de beauté japonaise.",
+      },
+      sahara: {
+        title: "Désert du Sahara, Maroc",
+        description:
+          "Océan de sable doré où le silence règne, les dunes ondulent sous un soleil implacable, et la nuit transforme le désert en un théâtre céleste.",
+      },
+      patagonia: {
+        title: "Patagonie, Argentine",
+        description:
+          "Territoire sauvage où les montagnes escarpées et les glaciers millénaires racontent une histoire de nature primitive et de beauté indomptée.",
+      },
+      bora_bora: {
+        title: "Bora Bora, Polynésie Française",
+        description:
+          "Joyau du Pacifique où les bungalows sur pilotis flottent entre ciel et lagon, offrant un refuge de luxe au cœur d'un paradis tropical.",
+      },
+    },
+    destination: {
+      title: "Horizons Insolites : Les Voyages qui Vous Inspireront",
+      options: {
+        title: "Niveaux de Difficulté",
+        cta: "En savoir plus",
+        safari_nature: {
+          title: "Safari et Nature",
+          description: "Rencontrez la faune sauvage dans son habitat naturel",
+          price: "À partir de 2500€",
+          difficulty: {
+            level: "Modéré",
+            explanation:
+              "Voyage exigeant physiquement et mentalement. Conditions rustiques, terrains variables. Nécessite une bonne forme physique et une capacité d'adaptation aux environnements challengeants.",
+          },
+        },
+        villes_culture: {
+          title: "Villes et Culture",
+          description:
+            "Découvrez l'histoire et les trésors architecturaux du monde",
+          price: "À partir de 1500€",
+          difficulty: {
+            level: "Facile",
+            explanation:
+              "Voyage accessible à tous. Visites culturelles et urbaines. Peu d'effort physique requis. Idéal pour les amateurs d'histoire et d'art.",
+          },
+        },
+        aventures_tropicales: {
+          title: "Aventures Tropicales",
+          description:
+            "Explorez des jungles luxuriantes et des plages paradisiaques",
+          price: "À partir de 1200€",
+          difficulty: {
+            level: "Facile",
+            explanation:
+              "Voyage accessible à tous. Pas de compétences physiques spéciales requises. Idéal pour les familles et les premiers voyages. Infrastructures touristiques complètes et sécurisées.",
+          },
+        },
+        montagnes_grands_espaces: {
+          title: "Montagnes et Grands Espaces",
+          description: "Défiez les sommets les plus mythiques de la planète",
+          price: "À partir de 2800€",
+          difficulty: {
+            level: "Expert",
+            explanation:
+              "Niveau le plus élevé de difficulté. Haute altitude, techniques d'escalade complexes. Condition physique exceptionnelle requise. Risques importants nécessitant une expérience approfondie.",
+          },
+        },
+        detente_bien_etre: {
+          title: "Détente et Bien-être",
+          description:
+            "Relaxez-vous dans des lieux paradisiaques et ressourçants",
+          price: "À partir de 2000€",
+          difficulty: {
+            level: "Facile",
+            explanation:
+              "Voyage axé sur la détente et le bien-être. Aucun effort physique requis. Idéal pour les retraites de yoga, les spas et les vacances reposantes.",
+          },
+        },
+        aventures_extremes: {
+          title: "Aventures Extrêmes",
+          description:
+            "Explorez des territoires insolites et défiez vos limites",
+          price: "À partir de 3000€",
+          difficulty: {
+            level: "Difficile",
+            explanation:
+              "Expérience extrême dans des conditions climatiques sévères. Préparation physique et mentale intensive. Équipement spécialisé obligatoire. Risques environnementaux importants.",
+          },
+        },
+      },
+    },
+    blogs: {
+      title: "Pourquoi Choisir des Voyages Insolites ?",
+      avantage1: {
+        title: "Expériences Uniques",
+        description:
+          "Découvrez des destinations hors des sentiers battus qui vous offriront des souvenirs inoubliables et des perspectives nouvelles.",
+      },
+      avantage2: {
+        title: "Sécurité Garantie",
+        description:
+          "Nos voyages sont soigneusement sélectionnés et préparés pour assurer votre sécurité tout en maximisant votre plaisir et votre découverte.",
+      },
+      avantage3: {
+        title: "Communauté de Voyageurs",
+        description:
+          "Rejoignez une communauté de voyageurs passionnés, partagez vos expériences et créez des connexions durables.",
+      },
+      blogs_cta: {
+        label: "Commencez Votre Aventure",
+      },
+    },
+    partner: {
+      title: "Nos Partenaires",
+      description:
+        "Découvrez les entreprises et organisations qui nous font confiance pour offrir des expériences uniques.",
+    },
+    newsletter: {
+      title: "Prêt à explorer le monde ?",
+      description:
+        "Rejoignez notre communauté et recevez des offres exclusives, des idées de voyages et des conseils pour des aventures inoubliables.",
+      placeholder: "Votre adresse e-mail",
+      button: {
+        label: "S'inscrire",
+      },
+    },
+  },
+  blog: {},
+  galleries: {},
+  contact: {},
   footer: {
     rights: "Tous droits réservés",
     privacy: "Politique de confidentialité",

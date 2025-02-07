@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { dataCarrousel } from "@/app/components/Destinations/Datas/DataCarrousel";
-import { destinationOptions } from "@/app/components/Destinations/Datas/DataDestination";
+import { destinationOptionsData } from "@/app/components/Destinations/Datas/DataDestination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,9 +10,12 @@ import CardCarrousel from "@/app/components/Destinations/CardCarrousel";
 import SearchDestination from "@/app/components/SearchDestination/SearchDestination";
 import Link from "next/link";
 import { partners } from "@/app/components/Destinations/Datas/DataPartners";
+import { useScopedI18n } from "@/locales/client";
 
 export default function DestinationsPage() {
-  const [showExplanation, setShowExplanation] = useState(null);
+  const t = useScopedI18n("destinations");
+  const destinationOptions = destinationOptionsData();
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -50,7 +53,7 @@ export default function DestinationsPage() {
       <section className="bg-white py-32">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl md:text-4xl font-bold text-center mb-12">
-            Horizons Insolites : Les Voyages qui Vous Inspireront
+            {t("destination.title")}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {destinationOptions.map((destination) => (
@@ -108,7 +111,7 @@ export default function DestinationsPage() {
                       href={`/destination/${destination.title}`}
                       className="mt-2 px-4 py-2 bg-yellow-600 text-white font-semibold rounded-lg hover:bg-yellow-700 transition duration-300"
                     >
-                      Find More
+                      {t("destination.options.cta")}
                     </Link>
                   </div>
                 </div>
@@ -122,7 +125,7 @@ export default function DestinationsPage() {
       <section className="bg-gray-50 py-24 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
-            Pourquoi Choisir des Voyages Insolites ?
+            {t("blogs.title")}
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -142,12 +145,10 @@ export default function DestinationsPage() {
                 />
               </svg>
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Expériences Uniques
+                {t("blogs.avantage1.title")}
               </h3>
               <p className="text-gray-600">
-                Découvrez des destinations hors des sentiers battus qui vous
-                offriront des souvenirs inoubliables et des perspectives
-                nouvelles.
+                {t("blogs.avantage1.description")}
               </p>
             </div>
 
@@ -167,12 +168,10 @@ export default function DestinationsPage() {
                 />
               </svg>
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Sécurité Garantie
+                {t("blogs.avantage2.title")}
               </h3>
               <p className="text-gray-600">
-                Nos voyages sont soigneusement sélectionnés et préparés pour
-                assurer votre sécurité tout en maximisant votre plaisir et votre
-                découverte.
+                {t("blogs.avantage2.description")}
               </p>
             </div>
 
@@ -192,11 +191,10 @@ export default function DestinationsPage() {
                 />
               </svg>
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Communauté de Voyageurs
+                {t("blogs.avantage3.title")}
               </h3>
               <p className="text-gray-600">
-                Rejoignez une communauté de voyageurs passionnés, partagez vos
-                expériences et créez des connexions durables.
+                {t("blogs.avantage3.description")}
               </p>
             </div>
           </div>
@@ -206,7 +204,7 @@ export default function DestinationsPage() {
               href="/contact"
               className="px-8 py-4 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300 inline-block text-lg"
             >
-              Commencez Votre Aventure
+              {t("blogs.blogs_cta.label")}
             </Link>
           </div>
         </div>
@@ -216,7 +214,7 @@ export default function DestinationsPage() {
       <section className="bg-yellow-500 py-32">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">
-            Nos Partenaires
+            {t("partners.title")}
           </h2>
 
           {/* Carrousel */}
@@ -249,23 +247,22 @@ export default function DestinationsPage() {
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">
-            Prêt à explorer le monde ?
+            {t("newsletter.title")}
           </h2>
           <p className="text-lg text-gray-700 mb-8">
-            Rejoignez notre communauté et recevez des offres exclusives, des
-            idées de voyages et des conseils pour des aventures inoubliables.
+            {t("newsletter.description")}
           </p>
           <form className="flex flex-col md:flex-row justify-center gap-4">
             <input
               type="email"
-              placeholder="Votre adresse e-mail"
+              placeholder="enter your e-mail"
               className="px-4 py-3 w-full md:w-1/3 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-yellow-500"
             />
             <button
               type="submit"
               className="px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300"
             >
-              S'inscrire
+              {t("newsletter.button.label")}
             </button>
           </form>
         </div>
