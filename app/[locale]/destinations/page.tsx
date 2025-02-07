@@ -15,18 +15,19 @@ import { useScopedI18n } from "@/locales/client";
 export default function DestinationsPage() {
   const t = useScopedI18n("destinations");
   const destinationOptions = destinationOptionsData();
+  const carrouselData = dataCarrousel();
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === dataCarrousel().length - 1 ? 0 : prevIndex + 1
+      prevIndex === carrouselData.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? dataCarrousel().length - 1 : prevIndex - 1
+      prevIndex === 0 ? carrouselData.length - 1 : prevIndex - 1
     );
   };
 
