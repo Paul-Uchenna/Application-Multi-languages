@@ -239,6 +239,12 @@ export default {
     titleThree: "Artikel",
     readMore: "Mehr lesen",
   },
+  galleries: {
+    title: "Entdecke die Welt Durch Unsere Urlaubsfotos",
+    subtitle:
+      "Versenke dich in atemberaubende Landschaften und lass dich zu Traumzielen bringen. Erkunde diese Galerie und finde Inspiration für deine nächste Abenteuerreise.",
+    loadMore: "Mehr Laden",
+  },
   footer: {
     rights: "Alle Rechte vorbehalten",
     privacy: "Datenschutzrichtlinie",

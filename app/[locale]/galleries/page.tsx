@@ -5,8 +5,11 @@ import Image from "next/image";
 import Masonry from "react-masonry-css";
 import axios from "axios";
 import { UnsplashPhotos } from "@/src/Types/types";
+import { useScopedI18n } from "@/locales/client";
 
 export default function GalleryPage() {
+  const t = useScopedI18n("galleries");
+
   const [photos, setPhotos] = useState<UnsplashPhotos[]>([]);
   const [page, setPage] = useState(1);
   const [isLoading, startTransition] = useTransition();
@@ -48,13 +51,9 @@ export default function GalleryPage() {
       <div className="max-w-[1000px] mx-auto px-4 md:px-0 py-20">
         <div className="w-full max-w-3xl mx-auto my-10 text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-yellow-500 mb-3">
-            Explore the World Through Our Vacation Photos
+            {t("title")}
           </h2>
-          <p className="text-sm md:text-base text-gray-400">
-            Immerse yourself in breathtaking landscapes and let yourself be
-            transported to dream destinations. Explore this gallery and find
-            inspiration for your next adventure.
-          </p>
+          <p className="text-sm md:text-base text-gray-400">{t("subtitle")}</p>
         </div>
 
         <Masonry
@@ -89,7 +88,7 @@ export default function GalleryPage() {
             disabled={isLoading}
             className="px-6 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 transition-colors"
           >
-            {isLoading ? "Loading..." : "Load More"}
+            {isLoading ? "Loading..." : t("loadMore")}
           </button>
         </div>
       </div>

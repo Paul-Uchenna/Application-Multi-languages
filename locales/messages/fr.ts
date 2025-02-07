@@ -240,7 +240,12 @@ export default {
     titleThree: "Articles",
     readMore: "En savoir plus",
   },
-  galleries: {},
+  galleries: {
+    title: "Explorez le Monde à Travers Nos Photos de Vacances",
+    subtitle:
+      "Plongez-vous dans des paysages à couper le souffle et laissez-vous transporter vers des destinations de rêve. Explorez cette galerie et trouvez de l'inspiration pour votre prochaine aventure.",
+    loadMore: "Charger Plus",
+  },
   contact: {},
   footer: {
     rights: "Tous droits réservés",

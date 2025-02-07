@@ -237,6 +237,12 @@ export default {
     titleThree: "Artículos",
     readMore: "Leer más",
   },
+  galleries: {
+    title: "Explora el Mundo a Través de Nuestras Fotos de Vacaciones",
+    subtitle:
+      "Sumérgete en paisajes impresionantes y déjate transportar a destinos de ensueño. Explora esta galería y encuentra inspiración para tu próxima aventura.",
+    loadMore: "Cargar Más",
+  },
   footer: {
     rights: "Todos los derechos reservados",
     privacy: "Política de privacidad",

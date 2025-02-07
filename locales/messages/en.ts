@@ -238,6 +238,12 @@ export default {
     titleThree: "Articles",
     readMore: "Read more",
   },
+  galleries: {
+    title: "Explore the World Through Our Vacation Photos",
+    subtitle:
+      "Immerse yourself in breathtaking landscapes and let yourself be transported to dream destinations. Explore this gallery and find inspiration for your next adventure.",
+    loadMore: "Load More",
+  },
   footer: {
     rights: "All rights reserved",
     privacy: "Privacy Policy",

@@ -235,6 +235,12 @@ export default {
     titleThree: "記事",
     readMore: "続きを読む",
   },
+  galleries: {
+    title: "バカンス写真を通じて世界を探索しよう",
+    subtitle:
+      "息をのむような風景に浸り、夢の目的地へと運ばれる感覚を体験してください。このギャラリーを探索して、次の冒険のインスピレーションを見つけましょう。",
+    loadMore: "さらに読み込む",
+  },
   footer: {
     rights: "全著作権所有",
     privacy: "プライバシーポリシー",
