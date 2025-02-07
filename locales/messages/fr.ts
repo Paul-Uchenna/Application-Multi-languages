@@ -231,7 +231,15 @@ export default {
       },
     },
   },
-  blog: {},
+  blog: {
+    titleOne: "Récits de Voyage",
+    subtitleOne: "Votre Guide vers des Aventures Inoubliables",
+    titleTwo: "Derniers Articles",
+    subtitleTwo:
+      "Découvrez des histoires inspirantes qui vous emmènent aux confins du monde, où l'aventure rencontre l'émerveillement. Découvrez des évasions inoubliables, des conseils précieux et laissez-vous transporter par la magie de l'inconnu. Prêt à rêver plus grand et à explorer plus loin ? 🌍✨",
+    titleThree: "Articles",
+    readMore: "En savoir plus",
+  },
   galleries: {},
   contact: {},
   footer: {

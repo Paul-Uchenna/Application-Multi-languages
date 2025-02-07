@@ -228,6 +228,15 @@ export default {
       },
     },
   },
+  blog: {
+    titleOne: "Relatos de Viaje",
+    subtitleOne: "Tu Guía para Aventuras Inolvidables",
+    titleTwo: "Últimos Artículos",
+    subtitleTwo:
+      "Descubre historias inspiradoras que te llevan a los rincones más lejanos del mundo, donde la aventura se encuentra con el asombro. Descubre escapadas inolvidables, consejos valiosos y déjate llevar por la magia del desconocido. ¿Listo para soñar más grande y explorar más allá? 🌍✨",
+    titleThree: "Artículos",
+    readMore: "Leer más",
+  },
   footer: {
     rights: "Todos los derechos reservados",
     privacy: "Política de privacidad",

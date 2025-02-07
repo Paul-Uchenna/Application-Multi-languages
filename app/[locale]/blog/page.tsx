@@ -5,8 +5,11 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import Link from "next/link";
 import { articles } from "@/app/components/Blog/DataArticles";
+import { useScopedI18n } from "@/locales/client";
 
 export default function Blog() {
+  const t = useScopedI18n("blog");
+
   useEffect(() => {
     gsap.fromTo(
       ".animate-fade-in",
@@ -29,11 +32,9 @@ export default function Blog() {
         <div className="absolute inset-0 flex items-center justify-center md:pl-20">
           <div className="text-white max-w-2xl text-center md:text-left">
             <h2 className="text-6xl font-bold mb-5 animate-fade-in">
-              Travel Tales
+              {t("titleOne")}
             </h2>
-            <p className="text-2xl animate-fade-in">
-              Your Guide to Unforgettable Adventures
-            </p>
+            <p className="text-2xl animate-fade-in">{t("subtitleOne")}</p>
           </div>
         </div>
       </div>
@@ -41,13 +42,10 @@ export default function Blog() {
       <section className="container mx-auto px-4 py-12 bg-gray-900 border-b border-gray-700">
         <div className="w-full max-w-3xl mx-auto text-center text-white leading-normal">
           <h2 className="text-2xl md:text-4xl font-bold text-yellow-500 mb-3">
-            Most recent
+            {t("titleTwo")}
           </h2>
           <p className="text-sm md:text-base text-gray-400">
-            Discover inspiring stories that take you to the far corners of the
-            world, where adventure meets wonder. Uncover unforgettable escapes,
-            valuable tips, and let yourself be carried away by the magic of the
-            unknown. Ready to dream bigger and explore further? 🌍✨
+            {t("subtitleTwo")}
           </p>
         </div>
 
@@ -69,7 +67,7 @@ export default function Blog() {
               </div>
               <div className="mt-4 flex flex-col flex-grow">
                 <span className="w-16 bg-yellow-300 text-yellow-900 text-xs font-bold px-2 py-1 rounded">
-                  Article
+                  {t("titleThree")}
                 </span>
                 <h3 className="text-xl font-bold mt-2">{article.title}</h3>
                 <p className="text-gray-400 text-sm mt-2 flex-grow">
@@ -87,7 +85,7 @@ export default function Blog() {
                     </div>
                     <Link href="#">
                       <button className="ml-auto text-yellow-500 hover:underline">
-                        Read more
+                        {t("readMore")}
                       </button>
                     </Link>
                   </div>

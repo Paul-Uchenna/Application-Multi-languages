@@ -229,6 +229,15 @@ export default {
       },
     },
   },
+  blog: {
+    titleOne: "Travel Tales",
+    subtitleOne: "Your Guide to Unforgettable Adventures",
+    titleTwo: "Latest Articles",
+    subtitleTwo:
+      "Discover inspiring stories that take you to the far corners of the world, where adventure meets wonder. Uncover unforgettable escapes, valuable tips, and let yourself be carried away by the magic of the unknown. Ready to dream bigger and explore further? 🌍✨",
+    titleThree: "Articles",
+    readMore: "Read more",
+  },
   footer: {
     rights: "All rights reserved",
     privacy: "Privacy Policy",

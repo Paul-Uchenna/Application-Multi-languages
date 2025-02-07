@@ -230,6 +230,15 @@ export default {
       },
     },
   },
+  blog: {
+    titleOne: "Reiseerzählungen",
+    subtitleOne: "Dein Führer zu unvergesslichen Abenteuern",
+    titleTwo: "Neueste Artikel",
+    subtitleTwo:
+      "Entdecke inspirierende Geschichten, die dich in die entlegensten Ecken der Welt führen, wo Abenteuer und Wunder zusammenkommen. Entdecke unvergessliche Ausflüge, wertvolle Tipps und lass dich von der Magie des Unbekannten mitreißen. Bereit, größer zu träumen und weiter zu erforschen? 🌍✨",
+    titleThree: "Artikel",
+    readMore: "Mehr lesen",
+  },
   footer: {
     rights: "Alle Rechte vorbehalten",
     privacy: "Datenschutzrichtlinie",
