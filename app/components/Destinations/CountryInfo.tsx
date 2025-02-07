@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { Country } from "@/src/Types/types";
 import { formatNumber } from "@/src/formatNumber";
+import { useScopedI18n } from "@/locales/client";
 
 export default function CountryInfo({ countryData }: { countryData: Country }) {
+  const t = useScopedI18n("destinations.countryId");
+
   return (
     <section className="border rounded-md p-5 shadow-md bg-white">
       <div className="flex gap-5 mb-4">
@@ -25,19 +28,31 @@ export default function CountryInfo({ countryData }: { countryData: Country }) {
       </div>
 
       <div>
-        <h2 className="text-2xl font-bold mb-3">General information</h2>
+        <h2 className="text-2xl font-bold mb-3">{t("titleOne")} </h2>
         <div className="font-medium text-md">
           <div className="pb-4 space-y-2 border-b">
             {[
-              { label: "Capital", value: countryData.capital.join(", ") },
-              { label: "Region", value: countryData.region },
-              { label: "Subregion", value: countryData.subregion },
               {
-                label: "Population",
+                label: t("countryInfo.capital"),
+                value: countryData.capital.join(", "),
+              },
+              { label: t("countryInfo.region"), value: countryData.region },
+              {
+                label: t("countryInfo.subregion"),
+                value: countryData.subregion,
+              },
+              {
+                label: t("countryInfo.population"),
                 value: formatNumber(countryData.population),
               },
-              { label: "Area", value: `${formatNumber(countryData.area)} km²` },
-              { label: "Timezones", value: countryData.timezones.join(", ") },
+              {
+                label: t("countryInfo.area"),
+                value: `${formatNumber(countryData.area)} km²`,
+              },
+              {
+                label: t("countryInfo.timezones"),
+                value: countryData.timezones.join(", "),
+              },
             ].map((item, index) => (
               <div key={index} className="flex">
                 <p className="w-1/2 font-semibold">{item.label}</p>
@@ -47,7 +62,7 @@ export default function CountryInfo({ countryData }: { countryData: Country }) {
           </div>
 
           <div className="py-5 border-b border-gray-300">
-            <p className="font-bold mb-3">Languages</p>
+            <p className="font-bold mb-3">{t("countryInfo.languages")} </p>
             <div className="flex flex-wrap gap-2">
               {Object.values(countryData.languages).map((language, i) => (
                 <span
@@ -61,7 +76,7 @@ export default function CountryInfo({ countryData }: { countryData: Country }) {
           </div>
 
           <div className="pt-4">
-            <p className="font-bold mb-3">Currencies</p>
+            <p className="font-bold mb-3">{t("countryInfo.currencies")}</p>
             <span>
               {Object.values(countryData.currencies)
                 .map((c) => `${c.name} (${c.symbol})`)

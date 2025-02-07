@@ -1,3 +1,4 @@
+import { useScopedI18n } from "@/locales/client";
 import dynamic from "next/dynamic";
 
 const Map = dynamic(() => import("@/app/components/WeatherMap/Map/Map"), {
@@ -22,12 +23,12 @@ export default function WeatherMap({
   weatherData: any | null;
   airQualityData: any | null;
 }) {
+  const t = useScopedI18n("destinations.countryId");
+
   return (
     <section className="bg-white flex flex-col gap-5 border rounded-md p-5">
       <div>
-        <h2 className="text-3xl md:text-3xl font-bold mb-5">
-          Geographic location
-        </h2>
+        <h2 className="text-3xl md:text-3xl font-bold mb-5">{t("titleTwo")}</h2>
         <Map coordinates={weatherData?.coord} />
       </div>
 
@@ -36,7 +37,7 @@ export default function WeatherMap({
           <div className="flex flex-col items-center justify-center h-full p-2 border rounded-md">
             <Loader />
             <p className="text-red-500 font-semibold mt-4 text-lg">
-              Unable to load weather data. Please try again later.
+              {t("weather.error")}
             </p>
           </div>
         ) : (

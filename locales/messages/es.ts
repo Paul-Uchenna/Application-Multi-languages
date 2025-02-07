@@ -198,6 +198,35 @@ export default {
         label: "Suscribirse",
       },
     },
+    countryId: {
+      titleOne: "Información general",
+      titleTwo: "Ubicación geográfica",
+      countryInfo: {
+        capital: "Capital",
+        region: "Región",
+        subregion: "Subregión",
+        population: "Población",
+        area: "Área",
+        timezones: "Zonas horarias",
+        languages: "Idiomas",
+        currencies: "Monedas",
+      },
+      weather: {
+        error:
+          "No se pueden cargar los datos meteorológicos. Por favor, inténtalo de nuevo más tarde.",
+        temperature: "Temperatura",
+        feelsLike: "Sensación térmica",
+        humidity: "Humedad",
+        windSpeed: "Velocidad del viento",
+        pressure: "Presión",
+        airQuality: "Calidad del aire",
+        condition: "Condiciones",
+      },
+      PhotoGallery: {
+        noPhotos: "No hay fotos disponibles para",
+        title: "Fotos de lugares para visitar en",
+      },
+    },
   },
   footer: {
     rights: "Todos los derechos reservados",

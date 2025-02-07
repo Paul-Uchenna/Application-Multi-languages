@@ -1,3 +1,4 @@
+import { useScopedI18n } from "@/locales/client";
 import { Country } from "@/src/Types/types";
 import Image from "next/image";
 import React from "react";
@@ -19,10 +20,14 @@ export default function PhotoGallery({
   photoGallery,
   countryData,
 }: PhotoGalleryProps) {
+  const t = useScopedI18n("destinations.countryId.PhotoGallery");
+
   if (!photoGallery || photoGallery.length === 0) {
     return (
       <div className="text-white text-center py-10">
-        <p>No photos available for {countryData.name.common}.</p>
+        <p>
+          {t("noPhotos")} {countryData.name.common}.
+        </p>
       </div>
     );
   }
@@ -31,7 +36,7 @@ export default function PhotoGallery({
     <div>
       <div className="container bg-white mx-auto p-5">
         <h2 className="text-2xl font-semibold mb-5">
-          Photos of places to visit in
+          {t("title")}
           <span className="text-yellow-500"> {countryData.name.common}</span>
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

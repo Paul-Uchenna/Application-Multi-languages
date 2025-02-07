@@ -200,6 +200,35 @@ export default {
         label: "Anmelden",
       },
     },
+    countryId: {
+      titleOne: "Allgemeine Informationen",
+      titleTwo: "Geografische Lage",
+      countryInfo: {
+        capital: "Hauptstadt",
+        region: "Region",
+        subregion: "Unterregion",
+        population: "Bevölkerung",
+        area: "Fläche",
+        timezones: "Zeitzonen",
+        languages: "Sprachen",
+        currencies: "Währungen",
+      },
+      weather: {
+        error:
+          "Wetterdaten konnten nicht geladen werden. Bitte versuche es später erneut.",
+        temperature: "Temperatur",
+        feelsLike: "Gefühlte Temperatur",
+        humidity: "Feuchtigkeit",
+        windSpeed: "Windgeschwindigkeit",
+        pressure: "Druck",
+        airQuality: "Luftqualität",
+        condition: "Bedingungen",
+      },
+      PhotoGallery: {
+        noPhotos: "Keine Fotos verfügbar für",
+        title: "Fotos von Orten zum Besuch in",
+      },
+    },
   },
   footer: {
     rights: "Alle Rechte vorbehalten",

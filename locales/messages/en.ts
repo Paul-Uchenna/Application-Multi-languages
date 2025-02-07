@@ -1,3 +1,6 @@
+import { error } from "console";
+import { title } from "process";
+
 export default {
   home: {
     menu: {
@@ -195,6 +198,34 @@ export default {
       placeholder: "Your email address",
       button: {
         label: "Subscribe",
+      },
+    },
+    countryId: {
+      titleOne: "General information",
+      titleTwo: "Geographic location",
+      countryInfo: {
+        capital: "Capital",
+        region: "Region",
+        subregion: "Subregion",
+        population: "Population",
+        area: "Area",
+        timezones: "Timezones",
+        languages: "Languages",
+        currencies: "Currencies",
+      },
+      weather: {
+        error: "Unable to load weather data. Please try again later.",
+        temperature: "Temperature",
+        feelsLike: "Feels Like",
+        humidity: "Humidity",
+        windSpeed: "Wind Speed",
+        pressure: "Pressure",
+        airQuality: "Air Quality",
+        condition: "Condition",
+      },
+      PhotoGallery: {
+        noPhotos: "No photos available for",
+        title: "Photos of places to visit in",
       },
     },
   },
